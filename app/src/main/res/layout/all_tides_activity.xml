@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/darker_gray"
+    android:padding="3dp"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/recycler_place"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_place_button"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        tools:ignore="InvalidId" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tides_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="list of tides"
+        android:descendantFocusability="afterDescendants"
+        android:layoutDirection="inherit"
+        android:scrollbars="vertical" />
+
+</LinearLayout>
