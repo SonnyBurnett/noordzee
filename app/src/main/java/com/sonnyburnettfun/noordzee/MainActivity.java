@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.util.Log;
@@ -301,19 +302,23 @@ public class MainActivity extends AppCompatActivity {
             prevtidetime.setBackgroundColor(Color.parseColor("#00c3ff"));
             prevtidehight.setBackgroundColor(Color.parseColor("#00c3ff"));
             nexttidename.setBackgroundColor(Color.parseColor("#e0af1f"));
+            nexttidename.setBackgroundResource(R.drawable.eb);
             nexttidetime.setBackgroundColor(Color.parseColor("#e0af1f"));
             nexttidehight.setBackgroundColor(Color.parseColor("#e0af1f"));
             prevtidename.setText("VLOED");
+            prevtidename.setBackgroundResource(R.drawable.vloed);
             nexttidename.setText("EB");
         }
         else {
             nexttidename.setBackgroundColor(Color.parseColor("#00c3ff"));
+            nexttidename.setBackgroundResource(R.drawable.vloed);
             nexttidetime.setBackgroundColor(Color.parseColor("#00c3ff"));
             nexttidehight.setBackgroundColor(Color.parseColor("#00c3ff"));
             prevtidename.setBackgroundColor(Color.parseColor("#e0af1f"));
             prevtidetime.setBackgroundColor(Color.parseColor("#e0af1f"));
             prevtidehight.setBackgroundColor(Color.parseColor("#e0af1f"));
             prevtidename.setText("EB");
+            prevtidename.setBackgroundResource(R.drawable.eb);
             nexttidename.setText("VLOED");
         }
         int verschilEbenVloed = Math.abs(DatumTijd.timeDiffinMinutes(waterstanden.get(previousTideIndex).time, waterstanden.get(nextTideIndex).time));
@@ -325,6 +330,7 @@ public class MainActivity extends AppCompatActivity {
 
         nowtidehight.setText(Math.round(percentageVerlopen) + " % ");
         nowtidename.setBackgroundColor(Color.parseColor("#c5cae9"));
+        nowtidename.setBackgroundResource(R.drawable.nu);
         nowtidetime.setBackgroundColor(Color.parseColor("#c5cae9"));
         nowtidehight.setBackgroundColor(Color.parseColor("#c5cae9"));
 
