@@ -1,4 +1,13 @@
 <resources>
     <string name="app_name">Getijden Noordzee NL</string>
     <string name="app_title">Getijden Noordzee NL</string>
+    <string name="plaatsbutton">plaats</string>
+    <string name="volgende_plaats">volgende plaats</string>
+    <string name="krijg_hulp">krijg hulp</string>
+    <string name="help">\?</string>
+    <string name="vorige_plaats">vorige plaats</string>
+    <string name="dag">dag</string>
+    <string name="maand">maand</string>
+    <string name="jaar">jaar</string>
+
 </resources>

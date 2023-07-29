@@ -25,6 +25,8 @@
                 android:id="@+id/minbutton"
                 android:layout_width="0dp"
                 android:layout_weight="0.2"
+                android:contentDescription="@string/vorige_plaats"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_height="match_parent"
                 android:textSize="20sp" />
 
@@ -33,6 +35,8 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
+                android:contentDescription="@string/plaatsbutton"
+                style="?android:attr/buttonBarButtonStyle"
                 android:textSize="20sp" />
 
             <Button
@@ -40,7 +44,9 @@
                 android:layout_width="0dp"
                 android:layout_weight="0.2"
                 android:layout_height="match_parent"
-                android:layout_marginRight="1mm"
+                android:contentDescription="@string/volgende_plaats"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_marginEnd="1dp"
                 android:textSize="20sp" />
 
 
@@ -51,8 +57,9 @@
                 android:layout_weight="0.2"
                 android:layout_height="match_parent"
                 android:textSize="14sp"
-                android:background="@color/teal_200"
-                android:text="\?"/>
+                android:contentDescription="@string/krijg_hulp"
+                style="?android:attr/buttonBarButtonStyle"
+                android:text="@string/help"/>
 
         </LinearLayout>
 
@@ -92,12 +99,16 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.3"
+                android:contentDescription="@string/dag"
+                style="?android:attr/buttonBarButtonStyle"
                 android:textSize="15sp"/>
             <Button
                 android:id="@+id/maandbutton"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:contentDescription="@string/maand"
+                style="?android:attr/buttonBarButtonStyle"
                 android:textSize="15sp"/>
 
             <Button
@@ -105,6 +116,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
+                android:contentDescription="@string/jaar"
+                style="?android:attr/buttonBarButtonStyle"
                 android:textSize="15sp" />
 
         </LinearLayout>

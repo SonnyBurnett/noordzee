@@ -84,7 +84,7 @@ public class JSONfile {
         ArrayList<Waterstand> waterstanden = new ArrayList<>();
 
         try {
-            waterstanden = mapper.readValue(jsonString, new TypeReference<List<Waterstand>>(){});
+            waterstanden = (ArrayList<Waterstand>) mapper.readValue(jsonString, new TypeReference<List<Waterstand>>(){});
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -104,28 +104,28 @@ public class JSONfile {
                 //fileNaam = "bergen2021.json";
                 break;
             case "Texel":
-                fileNaam = "new-texel2022.json";
+                fileNaam = "Texel-2023.json";
                 break;
             case "IJmuiden":
-                fileNaam = "new-ijmuiden2022.json";
+                fileNaam = "IJmuiden-2023.json";
                 break;
             case "Den Helder":
-                fileNaam = "new-denhelder2022.json";
+                fileNaam = "DenHelder-2023.json";
                 break;
             case "Scheveningen":
-                fileNaam = "new-scheveningen2022.json";
+                fileNaam = "Scheveningen-2023.json";
                 break;
             case "Hoek van Holland":
-                fileNaam = "new-hoekvanholland2022.json";
+                fileNaam = "HoekvanHolland-2023.json";
                 break;
             case "Terschelling":
-                fileNaam = "new-terschelling2022.json";
+                fileNaam = "Terschelling-2023.json";
                 break;
             case "Westkapelle":
-                fileNaam = "new-westkapelle2022.json";
+                fileNaam = "Westkapelle-2023.json";
                 break;
             case "Vlissingen":
-                fileNaam = "new-vlissingen2022.json";
+                fileNaam = "Vlissingen-2023.json";
                 break;
         }
 
