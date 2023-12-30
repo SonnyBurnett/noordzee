@@ -17,6 +17,8 @@ import android.widget.TextView;
 import java.util.Arrays;
 import java.util.List;
 
+//Tides app
+
 public class MainActivity extends AppCompatActivity {
 
     public Button jaarbutton, dagbutton, maandbutton, plaatsbutton, helpbutton, minbutton, plusbutton;
@@ -33,6 +35,14 @@ public class MainActivity extends AppCompatActivity {
     public static final String SHARED_PREFS = "sharedPrefs";
     public static final String NUMBER = "0";
     private String saveNum;
+    // Dark colors
+    public String IndianRed = "#CD5C5C";
+    // Light colors
+    public String LightSalmon = "#FFA07A", LightPink = "#FFB6C1", Moccasin = "#FFE4B5", Khaki = "#F0E68C";
+    public String Lavender = "#E6E6FA", Thistle = "#D8BFD8", LightGreen = "#90EE90", MediumAquamarine = "#66CDAA";
+    public String PaleTurquoise = "#AFEEEE", LightBlue = "#ADD8E6", BlanchedAlmond = "#FFEBCD", Gainsboro = "#DCDCDC";
+    public String LightCoral = "#F08080", Orange = "#FFA500", Gold = "#FFD700", PeachPuff = "#FFDAB9", Plum = "#DDA0DD", GreenYellow = "#ADFF2F";
+    public String SkyBlue = "#87CEEB", LightSteelBlue = "#B0C4DE", PapayaWhip = "#FFEFD5";
 
 
     @Override
@@ -223,7 +233,8 @@ public class MainActivity extends AppCompatActivity {
         terschelling = JSONfile.getWaterstanden(getApplicationContext(), "Terschelling");
         westkapelle = JSONfile.getWaterstanden(getApplicationContext(), "Westkapelle");
         vlissingen = JSONfile.getWaterstanden(getApplicationContext(), "Vlissingen");
-        bergen = Tides.estimateBergenTides(ijmuiden, denhelder);
+        bergen = JSONfile.getWaterstanden(getApplicationContext(), "Bergen");
+        //bergen = Tides.estimateBergenTides(ijmuiden, denhelder);
     }
 
 
@@ -253,70 +264,71 @@ public class MainActivity extends AppCompatActivity {
         Log.e("msg", "setActivityFields");
         plaatsbutton.setText(currentPlace);
         jaarbutton.setText(jaar);
-        String achtergrond = "#f1948a";
+        String achtergrond = LightSalmon;
         switch (currentPlaceIndex) {
             case(0):
-                achtergrond = "#4682B4";
+                achtergrond = Lavender;
                 break;
             case (1) :
-                achtergrond = "#D35400";
+                achtergrond = LightBlue;
                 break;
             case(2):
-                achtergrond = "#633974";
+                achtergrond = LightGreen;
                 break;
             case (3) :
-                achtergrond = "#6495ED";
+                achtergrond = LightPink;
                 break;
             case (4) :
-                achtergrond = "#DE3163";
+                achtergrond = MediumAquamarine;
                 break;
             case (5) :
-                achtergrond = "#6A5ACD";
+                achtergrond = Moccasin;
                 break;
             case (6) :
-                achtergrond = "#D68910";
+                achtergrond = Khaki;
                 break;
             case (7) :
-                achtergrond = "#940A2E";
+                achtergrond = Thistle;
                 break;
             case (8) :
-                achtergrond = "#0E6655";
+                achtergrond = PaleTurquoise;
                 break;
         }
-        plaatsbutton.setBackgroundColor(Color.parseColor(achtergrond));
-        minbutton.setBackgroundColor(Color.parseColor(achtergrond));
-        plusbutton.setBackgroundColor(Color.parseColor(achtergrond));
-        jaarbutton.setBackgroundColor(Color.parseColor(achtergrond));
-        helpbutton.setBackgroundColor(Color.parseColor( "#424949"));
 
-        totaal.setBackgroundColor(Color.parseColor("#839192"));
+        plaatsbutton.setBackgroundColor(Color.parseColor(achtergrond));
+        minbutton.setBackgroundColor(Color.parseColor(SkyBlue));
+        plusbutton.setBackgroundColor(Color.parseColor(SkyBlue));
+        jaarbutton.setBackgroundColor(Color.parseColor(LightSteelBlue));
+        helpbutton.setBackgroundColor(Color.parseColor( BlanchedAlmond));
+
+        totaal.setBackgroundColor(Color.parseColor(Gainsboro));
 
         dagbutton.setText(dagString.substring(2,4));
         maandbutton.setText(DatumTijd.getMonthName(dagString.substring(0,2)));
 
-        dagbutton.setBackgroundColor(Color.parseColor("#839192"));
-        maandbutton.setBackgroundColor(Color.parseColor("#839192"));
+        dagbutton.setBackgroundColor(Color.parseColor(SkyBlue));
+        maandbutton.setBackgroundColor(Color.parseColor(SkyBlue));
 
         if (waterstanden.get(previousTideIndex).tide.equals("HW")) {
-            prevtidename.setBackgroundColor(Color.parseColor("#00c3ff"));
-            prevtidetime.setBackgroundColor(Color.parseColor("#00c3ff"));
-            prevtidehight.setBackgroundColor(Color.parseColor("#00c3ff"));
-            nexttidename.setBackgroundColor(Color.parseColor("#e0af1f"));
+            prevtidename.setBackgroundColor(Color.parseColor(PeachPuff));
+            prevtidetime.setBackgroundColor(Color.parseColor(PeachPuff));
+            prevtidehight.setBackgroundColor(Color.parseColor(PeachPuff));
+            nexttidename.setBackgroundColor(Color.parseColor(Plum));
             nexttidename.setBackgroundResource(R.drawable.eb);
-            nexttidetime.setBackgroundColor(Color.parseColor("#e0af1f"));
-            nexttidehight.setBackgroundColor(Color.parseColor("#e0af1f"));
+            nexttidetime.setBackgroundColor(Color.parseColor(Plum));
+            nexttidehight.setBackgroundColor(Color.parseColor(Plum));
             prevtidename.setText("VLOED");
             prevtidename.setBackgroundResource(R.drawable.vloed);
             nexttidename.setText("EB");
         }
         else {
-            nexttidename.setBackgroundColor(Color.parseColor("#00c3ff"));
+            nexttidename.setBackgroundColor(Color.parseColor(PeachPuff));
             nexttidename.setBackgroundResource(R.drawable.vloed);
-            nexttidetime.setBackgroundColor(Color.parseColor("#00c3ff"));
-            nexttidehight.setBackgroundColor(Color.parseColor("#00c3ff"));
-            prevtidename.setBackgroundColor(Color.parseColor("#e0af1f"));
-            prevtidetime.setBackgroundColor(Color.parseColor("#e0af1f"));
-            prevtidehight.setBackgroundColor(Color.parseColor("#e0af1f"));
+            nexttidetime.setBackgroundColor(Color.parseColor(PeachPuff));
+            nexttidehight.setBackgroundColor(Color.parseColor(PeachPuff));
+            prevtidename.setBackgroundColor(Color.parseColor(Plum));
+            prevtidetime.setBackgroundColor(Color.parseColor(Plum));
+            prevtidehight.setBackgroundColor(Color.parseColor(Plum));
             prevtidename.setText("EB");
             prevtidename.setBackgroundResource(R.drawable.eb);
             nexttidename.setText("VLOED");
@@ -329,10 +341,10 @@ public class MainActivity extends AppCompatActivity {
         float percentageVerlopen = ((float) verschilNuenVorige / (float) verschilEbenVloed)*100;
 
         nowtidehight.setText(Math.round(percentageVerlopen) + " % ");
-        nowtidename.setBackgroundColor(Color.parseColor("#c5cae9"));
+        nowtidename.setBackgroundColor(Color.parseColor(PaleTurquoise));
         nowtidename.setBackgroundResource(R.drawable.nu);
-        nowtidetime.setBackgroundColor(Color.parseColor("#c5cae9"));
-        nowtidehight.setBackgroundColor(Color.parseColor("#c5cae9"));
+        nowtidetime.setBackgroundColor(Color.parseColor(PaleTurquoise));
+        nowtidehight.setBackgroundColor(Color.parseColor(PaleTurquoise));
 
         prevtidetime.setText(DatumTijd.makeNiceTime(waterstanden.get(previousTideIndex).time));
         nowtidetime.setText(DatumTijd.makeNiceTime(tijdString));

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/totaal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:baselineAligned="false"
+    tools:context=".MainActivity">
+
+    <!-- Bovenste rij knoppen -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/minbutton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            style="?android:attr/buttonBarButtonStyle"
+            android:textSize="@dimen/button_text_size"
+            android:padding="@dimen/button_padding"
+            android:text="@string/vorige_plaats" />
+
+        <Button
+            android:id="@+id/plaatsbutton"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            style="?android:attr/buttonBarButtonStyle"
+            android:textSize="@dimen/button_text_size"
+            android:padding="@dimen/button_padding"
+            android:text="@string/plaatsbutton" />
+
+        <!-- Voeg dimensies en resources toe voor andere knoppen -->
+
+        <Button
+            android:id="@+id/helpbutton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            style="?android:attr/buttonBarButtonStyle"
+            android:textSize="@dimen/small_button_text_size"
+            android:padding="@dimen/small_button_padding"
+            android:text="@string/help" />
+    </LinearLayout>
+
+    <!-- Middelste rij met datum- en tijdinformatie -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Voeg dimensies en resources toe voor TextViews -->
+
+        <TextView
+            android:id="@+id/datumnaam"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tijdnaam"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <!-- Onderste rij knoppen -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Voeg dimensies en resources toe voor knoppen -->
+
+        <Button
+            android:id="@+id/dagbutton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            style="?android:attr/buttonBarButtonStyle"
+            android:textSize="@dimen/small_button_text_size"
+            android:padding="@dimen/small_button_padding"
+            android:text="@string/dag" />
+
+        <Button
+            android:id="@+id/maandbutton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            style="?android:attr/buttonBarButtonStyle"
+            android:textSize="@dimen/small_button_text_size"
+            android:padding="@dimen/small_button_padding"
+            android:text="@string/maand" />
+
+        <Button
+            android:id="@+id/jaarbutton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            style="?android:attr/buttonBarButtonStyle"
+            android:textSize="@dimen/small_button_text_size"
+            android:padding="@dimen/small_button_padding"
+            android:text="@string/jaar" />
+    </LinearLayout>
+
+    <!-- Overige lay-out met getijden -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tideprevname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/tidenowname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/tidenextname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tideprevtime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/tidenowtime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/tidenexttime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="@drawable/round_text">
+
+            <TextView
+                android:id="@+id/tideprevhight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/tidenowhight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/tidenexthight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textSize="25sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -40,16 +40,17 @@ public class TidesList extends AppCompatActivity {
         String placeName = intent.getStringExtra(MainActivity.SELECTED_PLACE);
         mTextViewPlace.setText(placeName);
         String tideListString = intent.getStringExtra(MainActivity.SELECTED_PLACE);
+        mTides = JSONfile.getWaterstanden(getApplicationContext(), tideListString);
 
-        if (placeName.equals("Bergen")) {
-            List<Waterstand> ijmuiden, denhelder;
-            ijmuiden = JSONfile.getWaterstanden(getApplicationContext(), "IJmuiden");
-            denhelder = JSONfile.getWaterstanden(getApplicationContext(), "Den Helder");
-            mTides = Tides.estimateBergenTides(ijmuiden, denhelder);
-        }
-        else {
-            mTides = JSONfile.getWaterstanden(getApplicationContext(), tideListString);
-        }
+//        if (placeName.equals("Bergen")) {
+//            List<Waterstand> ijmuiden, denhelder;
+//            ijmuiden = JSONfile.getWaterstanden(getApplicationContext(), "IJmuiden");
+//            denhelder = JSONfile.getWaterstanden(getApplicationContext(), "Den Helder");
+//            mTides = Tides.estimateBergenTides(ijmuiden, denhelder);
+//        }
+//        else {
+//            mTides = JSONfile.getWaterstanden(getApplicationContext(), tideListString);
+//        }
 
         int firstToShow = 0;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {

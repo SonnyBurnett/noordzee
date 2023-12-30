@@ -9,4 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="ebkleurlijst">#FFC107</color>
     <color name="vloedkleurlijst">#03A9F4</color>
+    <color name= "RoyalBlue">#4169E1</color>
+    <color name= "CornflowerBlue">#6495ED</color>
+
 </resources>

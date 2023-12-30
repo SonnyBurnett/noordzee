@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Voorbeeld van dimensies -->
+    <dimen name="button_text_size">16sp</dimen>
+    <dimen name="button_text_size_big">25sp</dimen>
+    <dimen name="button_padding">8dp</dimen>
+    <dimen name="small_button_text_size">14sp</dimen>
+    <dimen name="small_button_padding">4dp</dimen>
+    <!-- Voeg hier andere dimensies toe -->
+</resources>

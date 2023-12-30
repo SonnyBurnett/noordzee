@@ -101,31 +101,31 @@ public class JSONfile {
 
         switch(plaats) {
             case "Bergen":
-                //fileNaam = "bergen2021.json";
+                fileNaam = "bergen-2024.json";
                 break;
             case "Texel":
-                fileNaam = "Texel-2023.json";
+                fileNaam = "texel-2024.json";
                 break;
             case "IJmuiden":
-                fileNaam = "IJmuiden-2023.json";
+                fileNaam = "ijmuiden-2024.json";
                 break;
             case "Den Helder":
-                fileNaam = "DenHelder-2023.json";
+                fileNaam = "denhelder-2024.json";
                 break;
             case "Scheveningen":
-                fileNaam = "Scheveningen-2023.json";
+                fileNaam = "scheveningen-2024.json";
                 break;
             case "Hoek van Holland":
-                fileNaam = "HoekvanHolland-2023.json";
+                fileNaam = "hoekvanholland-2024.json";
                 break;
             case "Terschelling":
-                fileNaam = "Terschelling-2023.json";
+                fileNaam = "terschelling-2024.json";
                 break;
             case "Westkapelle":
-                fileNaam = "Westkapelle-2023.json";
+                fileNaam = "westkapelle-2024.json";
                 break;
             case "Vlissingen":
-                fileNaam = "Vlissingen-2023.json";
+                fileNaam = "vlissingen-2024.json";
                 break;
         }
 

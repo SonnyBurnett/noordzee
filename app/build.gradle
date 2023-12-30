@@ -5,16 +5,16 @@ plugins {
 android {
         // compileSdkVersion 33
         defaultConfig {
-            compileSdk 33
+            compileSdk 34
         }
 
     defaultConfig {
         applicationId "com.sonnyburnettfun.noordzee"
         minSdkVersion 19
-        targetSdkVersion 33
+        targetSdkVersion 34
         multiDexEnabled true
-        versionCode 11
-        versionName "11.0"
+        versionCode 15
+        versionName "15.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -40,9 +40,9 @@ android {
 dependencies {
 
     implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'com.google.android.material:material:1.11.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    implementation 'com.google.code.gson:gson:2.8.9'
+    implementation 'com.google.code.gson:gson:2.10'
     implementation 'com.android.support:multidex:1.0.3'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
